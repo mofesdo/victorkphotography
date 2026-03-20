@@ -1,5 +1,3 @@
 export default function Me() {
-  return (
-    <div className="space-y-4"></div>
-  );
+  return <h1 className="text-3xl">Me</h1>;
 }
