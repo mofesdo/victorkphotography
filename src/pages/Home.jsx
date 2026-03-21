@@ -5,7 +5,7 @@ export default function Home() {
   const featuredPhoto = photos[0];
 
   return (
-    <div className="space-y-16">
+    <div className="min-h-screen space-y-16 bg-white text-black">
       <section className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div className="space-y-6">
           <p className="text-sm uppercase tracking-[0.2em] text-neutral-500">

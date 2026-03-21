@@ -37,7 +37,7 @@ export default function Navbar() {
             </button>
 
             {isProjectsOpen && (
-              <div className="absolute left-0 top-full z-20 mt-2 w-72 border border-neutral-200 bg-white py-2 shadow-sm">
+              <div className="absolute bottom-full left-0 z-20 mb-2 w-72 border border-neutral-200 bg-white py-2 shadow-sm">
                 {projectLinks.map((project) => (
                   <Link
                     key={project.slug}
