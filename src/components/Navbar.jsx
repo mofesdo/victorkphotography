@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed bottom-0 left-0 w-full border-t border-neutral-200 bg-white/90 backdrop-blur z-50">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:px-10">
+     <div className="flex w-full items-center justify-between px-6 md:px-10 py-3">
         <Link to="/" className="text-lg font-medium tracking-wide">
           Victor Koroma
         </Link>

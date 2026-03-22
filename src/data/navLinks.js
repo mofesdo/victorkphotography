@@ -39,7 +39,7 @@ export const projectLinks = [
 
 export const mainLinks = [
   { label: "Me", to: "/me" },
-  { label: "Press/Contact", to: "/press-contact" },
-  { label: "Exhibitions", to: "/exhibitions" },
+  { label: "Contact", to: "/contact" },
+  { label: "Press/Exhibitions", to: "/press-exhibitions" },
   { label: "Buy", to: "/buy" },
 ];
