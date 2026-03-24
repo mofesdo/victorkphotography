@@ -11,7 +11,7 @@ export default function Layout() {
 
       <Navbar />
 
-      <Footer />
+      {/*<Footer />*/}
     </div>
   );
 }
