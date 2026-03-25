@@ -1,10 +1,19 @@
 import { useParams } from "react-router-dom";
 import { projectLinks } from "../data/navLinks";
 
+import GBCM1 from "../assets/GBCMonoliths/1_GBCM_Tetris_Monolith_Victor_koroma.jpg";
+import GBCM2 from "../assets/GBCMonoliths/2_GBCM_Pokemon_Yellow_Monolith_Victor_Koroma.jpg";
+import GBM3 from "../assets/GBCMonoliths/3_GBCM_Metroid_Monolith_Victor_Koroma.jpg";
+
+const galleryImages = {
+  "game-boy-color-monoliths": [GBCM1, GBCM2, GBM3],
+};
+
 export default function ProjectPage() {
   const { slug } = useParams();
 
   const project = projectLinks.find((project) => project.slug === slug);
+  const images = galleryImages[slug] || [];
 
   if (!project) {
     return (
@@ -21,9 +30,14 @@ export default function ProjectPage() {
       </h1>
 
       <section className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        <p className="text-center text-neutral-500">
-          Gallery images for {project.label} will go here.
-        </p>
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`${project.label} ${index + 1}`}
+            className="w-full h-auto object-contain"
+          />
+        ))}
       </section>
     </main>
   );
