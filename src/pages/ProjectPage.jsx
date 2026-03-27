@@ -61,6 +61,7 @@ export default function ProjectPage() {
               key={index}
               src={image}
               alt={`${project.label} ${index + 1}`}
+              loading="lazy"
               onClick={() => setSelectedIndex(index)}
               className="mb-6 h-72 w-full cursor-pointer object-cover"
             />
