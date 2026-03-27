@@ -14,19 +14,31 @@ import GBM10 from "../assets/GBCMonoliths/10_GBCM_Installation_View.jpeg";
 import GBM11 from "../assets/GBCMonoliths/11_Victor_Koroma_Pokemon_Monolith.jpeg";
 import GBM12 from "../assets/GBCMonoliths/12_Victor_Koroma_Metroid_Monolith.jpeg";
 
+import GBCM1thumb from "../assets/GBCMonoliths/thumbnails/1_GBCM_Tetris_Monolith_Victor_koroma.jpg";
+import GBCM2thumb from "../assets/GBCMonoliths/thumbnails/2_GBCM_Pokemon_Yellow_Monolith_Victor_Koroma.jpg";
+import GBM3thumb from "../assets/GBCMonoliths/thumbnails/3_GBCM_Metroid_Monolith_Victor_Koroma.jpg";
+import GBM4thumb from "../assets/GBCMonoliths/thumbnails/4_GBCM_Mortal_Kombat_Monolith_Victor_Koroma copy.jpg";
+import GBM5thumb from "../assets/GBCMonoliths/thumbnails/5_GBCM_Pokemon_Red_Monolith_Victor_Koroma.jpg";
+import GBM6thumb from "../assets/GBCMonoliths/thumbnails/6_GBCM_Joker_Monolith_Victor_Koroma.jpg";
+import GBM8thumb from "../assets/GBCMonoliths/thumbnails/8_GBCM_Zelda_Monolith_Victor_Koroma.jpg";
+import GBM9thumb from "../assets/GBCMonoliths/thumbnails/9_GBCM_Installation_View.jpg";
+import GBM10thumb from "../assets/GBCMonoliths/thumbnails/10_GBCM_Installation_View.jpeg";
+import GBM11thumb from "../assets/GBCMonoliths/thumbnails/11_Victor_Koroma_Pokemon_Monolith.jpeg";
+import GBM12thumb from "../assets/GBCMonoliths/thumbnails/12_Victor_Koroma_Metroid_Monolith.jpeg";
+
 const galleryImages = {
   "game-boy-color-monoliths": [
-    GBCM1,
-    GBCM2,
-    GBM3,
-    GBM4,
-    GBM5,
-    GBM6,
-    GBM8,
-    GBM9,
-    GBM10,
-    GBM11,
-    GBM12,
+    { src: GBCM1, thumbnail: GBCM1thumb },
+    { src: GBCM2, thumbnail: GBCM2thumb },
+    { src: GBM3, thumbnail: GBM3thumb },
+    { src: GBM4, thumbnail: GBM4thumb },
+    { src: GBM5, thumbnail: GBM5thumb },
+    { src: GBM6, thumbnail: GBM6thumb },
+    { src: GBM8, thumbnail: GBM8thumb },
+    { src: GBM9, thumbnail: GBM9thumb },
+    { src: GBM10, thumbnail: GBM10thumb },
+    { src: GBM11, thumbnail: GBM11thumb },
+    { src: GBM12, thumbnail: GBM12thumb },
   ],
 };
 
@@ -59,7 +71,7 @@ export default function ProjectPage() {
           {images.map((image, index) => (
             <img
               key={index}
-              src={image}
+              src={image.thumbnail}
               alt={`${project.label} ${index + 1}`}
               loading="lazy"
               onClick={() => setSelectedIndex(index)}
@@ -89,7 +101,7 @@ export default function ProjectPage() {
           </button>
 
           <img
-            src={selectedImage}
+            src={selectedImage.src}
             alt="Selected gallery image"
             className="max-h-[85vh] max-w-[85vw] object-contain"
           />
