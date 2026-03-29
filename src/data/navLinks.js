@@ -1,7 +1,7 @@
 export const projectLinks = [
   {
-    label: "E-commerce / Editorial",
-    slug: "e-commerce-editorial",
+    label: "Commercial & Advertising",
+    slug: "commercial-advertising",
   },
   {
     label: "Museum / Auction Collections",
